@@ -6,16 +6,21 @@ int main(int argc, char** argv)
 {
     vector<int> vec;
 
-    for(int i=0; i < 10; ++i)
+    for(int i = 0; i < 10; ++i)
     {
-        vec.at(i) = i;
+        vec.push_back(i);
     }
 
-//    vector<int>::iterator
-    for(auto it = vec.cbegin(); it != vec.cend(); ++it)
+    vec.erase(vec.begin() + 5);
+    vec.erase(vec.begin() + 5);
+    vec.erase(vec.begin(), vec.begin() + 3);
+
+    for(unsigned i = 0; i != vec.size(); ++i)
     {
-        cout<<*it<<" ";
+        cout<<vec[i]<<" ";
     }
+
+    cout<<endl;
 
     return 0;
 
