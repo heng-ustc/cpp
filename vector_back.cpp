@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 
-int main(int charc, char** charv)
+int main(int argc, char** argv)
 {
     vector<int> vec;
     for(int i = 0; i != 10; ++i)
