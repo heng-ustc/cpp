@@ -36,19 +36,44 @@ int main(int argc, char** argv)
 //        cout<<*it<<" ";
 //    }
 //
-    vector<int> vec;
-    vec.push_back(10);
-    while(vec.back() != 0)
+// //vec.back
+//
+//    vector<int> vec;
+//    vec.push_back(10);
+//    while(vec.back() != 0)
+//    {
+//        vec.push_back(vec.back() - 1);
+//    }
+//
+//    cout<<"myvec is:"<<endl;
+//    while(vec.end() != vec.begin())
+//    {
+//        cout<<*(vec.end()-1)<<" ";
+//        vec.pop_back();
+//    }
+
+
+//vec reverse
+
+    vector<int> vec(10);
+    vector<int>::size_type sz = vec.size();
+
+    for(unsigned i = 0; i < sz; ++i) vec[i] = i;
+
+    for(unsigned i = 0; i < sz/2; ++i)
     {
-        vec.push_back(vec.back() - 1);
+        int temp;
+        temp = vec[i];
+        vec[i] = vec[sz-1-i];
+        vec[sz-1-i] = temp;
     }
 
-    cout<<"myvec is:"<<endl;
-    while(vec.end() != vec.begin())
+    cout<<"vec contains: ";
+    for(unsigned i = 0; i < sz; ++i)
     {
-        cout<<*(vec.end()-1)<<" ";
-        vec.pop_back();
+        cout<<vec[i]<<" ";
     }
+    cout<<endl;
 
     return 0;
 }
