@@ -2,26 +2,18 @@
 #include <iostream>
 #include <string>
 #include <bitset>
+#include <deque>
 
 using namespace std;
 
 int main ()
 {
-    unsigned char b1 = 0x12;
-    unsigned char b2 = 0x32;
-    unsigned char res = b1 | b2;
-    cout<<bitset<8>(b1)<<endl;
-    cout<<bitset<8>(b2)<<endl;
-    cout<<bitset<8>(res)<<endl;
-    cout<<true<<' '<<false<<endl;
-    cout<<boolalpha
-        <<true<<'\t'<<false<<endl;
-    cout<<noboolalpha
-        <<true<<'\t'<<false<<endl;
+    bitset<4> mybits;
+    mybits[0] = 1;
+    mybits[1] = mybits[0];
 
-    cout<<sizeof(char)<<' '<<sizeof(int)<<' '
-        <<sizeof(float)<<' '<<sizeof(signed)<<' '
-        <<sizeof(double)<<' '<<sizeof(vector)<<' ';
+    cout<<mybits<<" as an integer is: "<<mybits.to_ulong()<<endl;
+
 
 //  bitset<4> first  (string("1001"));
 //  bitset<4> second (string("0011"));        // second keeps 0011.
