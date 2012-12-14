@@ -8,11 +8,10 @@ using namespace std;
 
 int main ()
 {
-    bitset<4> mybits;
-    mybits[0] = 1;
-    mybits[1] = mybits[0];
-
-    cout<<mybits<<" as an integer is: "<<mybits.to_ulong()<<endl;
+    bitset<4> bits(string("1001"));
+    cout<<bits<<endl;
+    cout<<(bits<<1)<<endl;
+    cout<<(bits<<=2)<<endl;
 
 
 //  bitset<4> first  (string("1001"));
