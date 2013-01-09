@@ -8,11 +8,35 @@ using namespace std;
 
 int main ()
 {
-    bitset<4> bits(string("1001"));
-    cout<<bits<<endl;
-    cout<<(bits<<1)<<endl;
-    cout<<(bits<<=2)<<endl;
+    const short ARR_DIM(8);
+    short starsArray1[ARR_DIM] = {0};
+    int tempDist = 5;
+//    		if(tempDist > 6.66)
+//			continue;
+        if(tempDist > 6.23)
+			starsArray1[ARR_DIM - 1]++;
+		else if(tempDist > 5.77)
+			starsArray1[ARR_DIM - 2]++;
+		else if(tempDist > 5.27)
+			starsArray1[ARR_DIM - 3]++;
+		else if(tempDist > 4.71)
+			starsArray1[ARR_DIM - 4]++;
+		else if(tempDist > 4.07)
+			starsArray1[ARR_DIM - 5]++;
+		else if(tempDist > 3.33)
+			starsArray1[ARR_DIM - 6]++;
+		else if(tempDist > 2.35)
+			starsArray1[ARR_DIM - 7]++;
+		else if(tempDist > 0.0)
+			starsArray1[ARR_DIM - 8]++;
+for(int i = 1; i != ARR_DIM; ++i)
+{
+    cout<<"starsArray1[ARR_DIM - "<<i<<"] = "<<starsArray1[ARR_DIM -i]<<endl;
+}
 
+
+//add 1
+//add 2
 
 //  bitset<4> first  (string("1001"));
 //  bitset<4> second (string("0011"));        // second keeps 0011.

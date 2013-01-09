@@ -32,7 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="clear.cpp" />
+		<Unit filename="bitset.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />
